@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update courier</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/courier/{phonenumber}(phonenumber=${courier.getPhonenumber()})}" th:object="${courier}">
+    <label for="deliverytype">Enter password: </label>
+    <input type="text" th:field="*{deliverytype}" id="deliverytype"/>
+    <br/>
+    <input type="submit" value="UPDATE">
+    <br/>
+    <a th:href="@{/courier/{phonenumber}(phonenumber=${courier.getPhonenumber()})}">Back</a>
+</form>
+</body>
+</html>

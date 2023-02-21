@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Список курьеров</title>
+</head>
+<body>
+
+<div th:each = "courier: ${couriers}">
+  <a th:href="@{/courier/{firstname}(firstname = ${courier.getFirstname()})}" th:text = "'Courier name : ' + ${courier.getFirstname()} + ' ' + ${courier.getLastname()}">text</a>
+
+</div>
+<hr/>
+<a href="/courier/new">Create new courier</a>
+</body>
+</html>
